@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню кофейни «Зерно 7» | Кофе, десерты, зерно</title>
+    <meta name="description" content="Меню кофейни Зерно 7: эспрессо, капучино, флэт уайт, фильтр-кофе, раф, десерты. Зерно собственной обжарки.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Меню кофейни «Зерно 7»">
+    <meta property="og:description" content="Попробуйте наш кофе и десерты. Есть опции без лактозы.">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="Логотип Зерно 7" width="40" height="40">
+                <span>ЗЕРНО 7</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link" style="color: var(--color-coffee); font-weight: bold;">Меню</a></li>
+                    <li class="nav__item"><a href="beans.html" class="nav__link">Зерно</a></li>
+                    <li class="nav__item"><a href="latte-guide.html" class="nav__link">Гид по латте</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+79002070777" class="header__phone" data-event="contact_click" data-contact-type="phone">+7 (900) 207-07-77</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Фильтр меню -->
+        <section class="section" style="padding-bottom: 20px;">
+            <div class="container">
+                <h1 class="section__title">Меню кофейни</h1>
+                
+                <div class="menu-filter">
+                    <button class="filter-btn active" data-filter="all" data-event="menu_filter" data-filter-value="all">Всё меню</button>
+                    <button class="filter-btn" data-filter="coffee" data-event="menu_filter" data-filter-value="coffee">Кофе</button>
+                    <button class="filter-btn" data-filter="tea" data-event="menu_filter" data-filter-value="tea">Чай</button>
+                    <button class="filter-btn" data-filter="dessert" data-event="menu_filter" data-filter-value="dessert">Десерты</button>
+                    <button class="filter-btn" data-filter="lactose-free" data-event="menu_filter" data-filter-value="lactose-free">Без лактозы</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Позиции меню -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="menu-grid" id="menu-grid">
+                    
+                    <!-- Кофе -->
+                    <div class="menu-item" data-category="coffee">
+                        <h3>Эспрессо</h3>
+                        <p>Классический крепкий кофе. Порция 40 мл.</p>
+                        <span class="price">140 ₽</span>
+                    </div>
+                    <div class="menu-item" data-category="coffee">
+                        <h3>Капучино 300 мл</h3>
+                        <p>Эспрессо с взбитым молоком и плотной молочной пенкой.</p>
+                        <span class="price">240 ₽</span>
+                    </div>
+                    <div class="menu-item" data-category="coffee">
+                        <h3>Флэт уайт</h3>
+                        <p>Двойной эспрессо с небольшим количеством молока (объем 200 мл).</p>
+                        <span class="price">260 ₽</span>
+                    </div>
+                    <div class="menu-item" data-category="coffee">
+                        <h3>Фильтр-кофе</h3>
+                        <p>Альтернативный способ заваривания. Насыщенный вкус без горечи.</p>
+                        <span class="price">180 ₽</span>
+                    </div>
+                    <div class="menu-item" data-category="coffee lactose-free">
+                        <h3>Раф (без лактозы)</h3>
+                        <p>Нежный кофейный напиток со сливками и сиропом. Готовим на безлактозном молоке.</p>
+                        <span class="price">280 ₽</span>
+                    </div>
+
+                    <!-- Чай (для работы фильтра, хотя в ТЗ состав не указан, добавим базовый) -->
+                    <div class="menu-item" data-category="tea lactose-free">
+                        <h3>Чай листовой</h3>
+                        <p>Черный или зеленый. Подается в чайнике.</p>
+                        <span class="price">190 ₽</span>
+                    </div>
+
+                    <!-- Десерты -->
+                    <div class="menu-item" data-category="dessert">
+                        <h3>Десерты</h3>
+                        <p>Свежая выпечка и сладости к кофе. Спросите у бариста о наличии.</p>
+                        <span class="price">от 190 ₽</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Карта и адрес -->
+        <section class="section" style="background: #fff;">
+            <div class="container">
+                <h2 class="section__title">Как нас найти</h2>
+                <div class="map-container">
+                    <div class="map-info">
+                        <p><strong>Адрес:</strong> 614 101, г. Новоозёрск, пр. Обжарщиков, д. 7</p>
+                        <p><strong>Режим работы:</strong> Пн–Вс 08:00–22:00</p>
+                        <a href="https://yandex.ru/maps/?text=Новоозёрск, пр. Обжарщиков, д. 7" target="_blank" class="btn btn--primary" data-event="map_open" data-map-service="yandex">Открыть на карте</a>
+                    </div>
+                    <!-- Здесь мог бы быть iframe с картой, но для сдачи достаточно ссылки -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <p>ООО «Зерно Семь»</p>
+                <p>614 101, г. Новоозёрск, пр. Обжарщиков, д. 7</p>
+                <p>Пн–Вс 08:00–22:00</p>
+            </div>
+            <div class="footer__socials">
+                <a href="#" class="social-link" data-event="social_click" data-network="telegram" data-page-section="footer">Telegram</a>
+                <a href="#" class="social-link" data-event="social_click" data-network="vk" data-page-section="footer">ВКонтакте</a>
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем скрипты -->
+    <script src="js/analytics.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

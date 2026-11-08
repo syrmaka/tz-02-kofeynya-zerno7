@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гид: Сердце на капучино за 5 шагов | Зерно 7</title>
+    <meta name="description" content="Пошаговый гид по латте-арту для новичков. Научитесь рисовать сердце на капучино. Промокод на скидку внутри.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Гид: Сердце на капучино за 5 шагов">
+    <meta property="og:description" content="Скачайте бесплатный гид и получите промокод на курс латте-арта.">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="Логотип Зерно 7" width="40" height="40">
+                <span>ЗЕРНО 7</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">Меню</a></li>
+                    <li class="nav__item"><a href="beans.html" class="nav__link">Зерно</a></li>
+                    <li class="nav__item"><a href="latte-guide.html" class="nav__link" style="color: var(--color-coffee); font-weight: bold;">Гид по латте</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+79002070777" class="header__phone" data-event="contact_click" data-contact-type="phone">+7 (900) 207-07-77</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Заголовок и инструкция -->
+        <section class="section">
+            <div class="container" style="max-width: 800px;">
+                <h1 class="section__title">Сердце на капучино за 5 шагов</h1>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 40px;">
+                    Добро пожаловать! Этот гид создан специально для тех, кто хочет научиться рисовать латте-арт дома. 
+                    Ниже — простая инструкция, с которой справится даже новичок.
+                </p>
+
+                <div class="guide-steps">
+                    <div class="step">
+                        <span class="step__number">1</span>
+                        <div class="step__content">
+                            <h3>Сварите эспрессо</h3>
+                            <p>Возьмите 18 грамм свежемолотого кофе и приготовьте порцию эспрессо объемом 30–40 мл в вашу чашку.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step__number">2</span>
+                        <div class="step__content">
+                            <h3>Взбейте молоко</h3>
+                            <p>Налейте холодное молоко в питчер (специальный кувшин для взбивания) и создайте микропену. Она должна быть гладкой, как жидкий йогурт.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step__number">3</span>
+                        <div class="step__content">
+                            <h3>Начните вливать</h3>
+                            <p>Наклоните чашку с эспрессо. Начните вливать молоко с высоты 5–10 см тонкой струей. Это создаст базу.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step__number">4</span>
+                        <div class="step__content">
+                            <h3>Опустите питчер</h3>
+                            <p>Когда чашка заполнится наполовину, опустите носик питчера ближе к поверхности кофе и начните рисовать круглые пятна (это будущие половинки сердца).</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step__number">5</span>
+                        <div class="step__content">
+                            <h3>Сделайте сердце</h3>
+                            <p>Проведите носиком питчера через центр кругов сверху вниз, чтобы соединить их. Ваше сердце готово!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Скачать PDF и Промокод -->
+        <section class="section" style="background: #fff;">
+            <div class="container" style="max-width: 800px; text-align: center;">
+                <h2 class="section__title">Заберите гид и промокод</h2>
+                
+                <p style="margin-bottom: 20px;">
+                    Мы собрали эту инструкцию в удобный PDF-файл с картинками. Скачайте его, чтобы всегда иметь под рукой.
+                </p>
+                
+                <a href="files/latte-guide.pdf" class="btn btn--primary" download data-event="file_download" data-file-name="latte-guide.pdf" data-file-extension="pdf" style="margin-bottom: 40px;">
+                    Скачать гид PDF
+                </a>
+
+                <div class="promo-box">
+                    <p>А еще мы дарим вам скидку <strong>10%</strong> на курс «Латте-арт»!</p>
+                    <p>Ваш промокод:</p>
+                    <div class="promo-code" id="promo-code">LATTE10</div>
+                    <button class="btn" id="copy-promo-btn" data-event="promo_copy" data-promo-code="LATTE10" style="background: var(--color-cream); color: var(--color-coffee); border: 1px solid var(--color-coffee);">
+                        Скопировать промокод
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Кнопка записи -->
+        <section class="section cta-section">
+            <div class="container cta-section__container">
+                <h2>Хотите освоить крутые узоры?</h2>
+                <p>Запишитесь на наш курс «Латте-арт». 3 занятия, группа до 6 человек. Используйте промокод при записи.</p>
+                <a href="contacts.html" class="btn btn--primary" data-event="cta_click" data-button-name="latte_course_order" data-page-section="latte_cta">Записаться на латте-арт</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <p>ООО «Зерно Семь»</p>
+                <p>614 101, г. Новоозёрск, пр. Обжарщиков, д. 7</p>
+                <p>Пн–Вс 08:00–22:00</p>
+            </div>
+            <div class="footer__socials">
+                <a href="#" class="social-link" data-event="social_click" data-network="telegram" data-page-section="footer">Telegram</a>
+                <a href="#" class="social-link" data-event="social_click" data-network="vk" data-page-section="footer">ВКонтакте</a>
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/analytics.js"></script>
+    <script src="js/promo.js"></script>
+</body>
+</html>

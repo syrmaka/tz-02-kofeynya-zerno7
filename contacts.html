@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на курсы и контакты | Школа бариста «Зерно 7»</title>
+    <meta name="description" content="Оставьте заявку на обучение в школе бариста. Наши контакты: телефон, e-mail, Telegram и WhatsApp.">
+    
+    <meta property="og:title" content="Запись на курсы | Зерно 7">
+    <meta property="og:description" content="Выберите курс и оставьте заявку. Мы свяжемся с вами.">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="Логотип Зерно 7" width="40" height="40">
+                <span>ЗЕРНО 7</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">Меню</a></li>
+                    <li class="nav__item"><a href="beans.html" class="nav__link">Зерно</a></li>
+                    <li class="nav__item"><a href="latte-guide.html" class="nav__link">Гид по латте</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link" style="color: var(--color-coffee); font-weight: bold;">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+79002070777" class="header__phone" data-event="contact_click" data-contact-type="phone">+7 (900) 207-07-77</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container contact-container">
+                
+                <!-- Форма записи -->
+                <div class="form-wrapper">
+                    <h1 class="section__title" style="text-align: left;">Запись на курс</h1>
+                    <p style="margin-bottom: 20px;">Заполните форму, и мы свяжемся с вами в ближайшее время.</p>
+
+                    <!-- Форма. Атрибут action мы оставляем пустым, всем управляет JS -->
+                    <form id="lead-form" class="lead-form" novalidate>
+                        
+                        <!-- СКРЫТЫЕ ПОЛЯ (для JS и UTM) -->
+                        <input type="hidden" name="request_id" id="request_id">
+                        <input type="hidden" name="utm_source" id="utm_source">
+                        <input type="hidden" name="utm_medium" id="utm_medium">
+                        <input type="hidden" name="utm_campaign" id="utm_campaign">
+                        <input type="hidden" name="utm_content" id="utm_content">
+
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" placeholder="Иван" required minlength="2" maxlength="60">
+                            <span class="error-message" id="error-name"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (900) 000-00-00" required>
+                            <span class="error-message" id="error-phone"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.ru">
+                            <span class="error-message" id="error-email"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="course">Интересующий курс *</label>
+                            <select id="course" name="course" required>
+                                <option value="" disabled selected>Выберите курс</option>
+                                <option value="barista_basic">Бариста с нуля</option>
+                                <option value="latte_art">Латте-арт</option>
+                                <option value="alternative">Альтернативное заваривание</option>
+                                <option value="corporate">Корпоративный мастер-класс</option>
+                            </select>
+                            <span class="error-message" id="error-course"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="start_month">Желаемый месяц старта *</label>
+                            <select id="start_month" name="start_month" required>
+                                <option value="" disabled selected>Выберите месяц</option>
+                                <option value="dec_2026">Декабрь 2026</option>
+                                <option value="jan_2027">Январь 2027</option>
+                                <option value="feb_2027">Февраль 2027</option>
+                            </select>
+                            <span class="error-message" id="error-start_month"></span>
+                        </div>
+
+                        <!-- Чекбокс согласия -->
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">
+                                Я согласен(на) на обработку персональных данных в соответствии с 
+                                <a href="privacy.html" target="_blank">политикой конфиденциальности</a> *
+                            </label>
+                            <span class="error-message" id="error-privacy"></span>
+                        </div>
+
+                        <!-- Кнопка отправки. Обратите внимание: type="button", чтобы форма не перезагружалась -->
+                        <button type="button" id="submit-btn" class="btn btn--primary" style="width: 100%;">Отправить заявку</button>
+                        
+                        <!-- Сообщение об общей ошибке -->
+                        <div id="form-general-error" class="error-message" style="text-align: center; margin-top: 15px;"></div>
+                    </form>
+                </div>
+
+                <!-- Контакты и мессенджеры -->
+                <div class="contact-info-wrapper">
+                    <h2>Контакты</h2>
+                    <div class="contact-block">
+                        <p>Телефон:</p>
+                        <a href="tel:+79002070777" class="contact-link" data-event="contact_click" data-contact-type="phone">+7 (900) 207-07-77</a>
+                    </div>
+                    <div class="contact-block">
+                        <p>E-mail:</p>
+                        <a href="mailto:hello@zerno7.example" class="contact-link" data-event="contact_click" data-contact-type="email">hello@zerno7.example</a>
+                    </div>
+                    
+                    <div class="contact-block" style="margin-top: 30px;">
+                        <p>Напишите нам в мессенджерах:</p>
+                        <div class="messenger-buttons">
+                            <a href="https://t.me/zerno7_example" target="_blank" class="btn btn--telegram" data-event="messenger_click" data-messenger="telegram">Telegram</a>
+                            <a href="https://wa.me/79002070777" target="_blank" class="btn btn--whatsapp" data-event="messenger_click" data-messenger="whatsapp">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <p>ООО «Зерно Семь»</p>
+                <p>614 101, г. Новоозёрск, пр. Обжарщиков, д. 7</p>
+                <p>Пн–Вс 08:00–22:00</p>
+            </div>
+            <div class="footer__socials">
+                <a href="#" class="social-link" data-event="social_click" data-network="telegram" data-page-section="footer">Telegram</a>
+                <a href="#" class="social-link" data-event="social_click" data-network="vk" data-page-section="footer">ВКонтакте</a>
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем скрипты -->
+    <script src="js/analytics.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

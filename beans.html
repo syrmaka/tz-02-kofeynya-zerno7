@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зерно собственной обжарки | Кофейня «Зерно 7»</title>
+    <meta name="description" content="Купить кофе в зернах собственной обжарки. Светлая, средняя и темная обжарка. Свежий помол для воронки, эспрессо и аэропресса.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Зерно собственной обжарки «Зерно 7»">
+    <meta property="og:description" content="Свежеобжаренный кофе в зернах. Подберем обжарку под ваш способ заваривания.">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="Логотип Зерно 7" width="40" height="40">
+                <span>ЗЕРНО 7</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">Меню</a></li>
+                    <li class="nav__item"><a href="beans.html" class="nav__link" style="color: var(--color-coffee); font-weight: bold;">Зерно</a></li>
+                    <li class="nav__item"><a href="latte-guide.html" class="nav__link">Гид по латте</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+79002070777" class="header__phone" data-event="contact_click" data-contact-type="phone">+7 (900) 207-07-77</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Карточки сортов -->
+        <section class="section">
+            <div class="container">
+                <h1 class="section__title">Зерно собственной обжарки</h1>
+                <p style="text-align: center; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Мы обжариваем зерно небольшими партиями каждую неделю. Вы всегда получаете свежий продукт. Вес — 250 г.
+                </p>
+
+                <div class="beans-grid">
+                    <!-- Сорт 1 -->
+                    <article class="bean-card" data-event="bean_view" data-bean-name="Ethiopia Yirgacheffe" data-roast-level="light">
+                        <img src="img/bean1.webp" alt="Зерно Эфиопия Иргачефф" width="300" height="200">
+                        <div class="bean-card__content">
+                            <h3>Эфиопия Иргачефф</h3>
+                            <span class="roast-badge roast-light">Светлая обжарка</span>
+                            <p>Яркая кислотность, ноты бергамота и жасмина. Идеально для воронки и аэропресса.</p>
+                            <span class="price">690 ₽</span>
+                        </div>
+                    </article>
+
+                    <!-- Сорт 2 -->
+                    <article class="bean-card" data-event="bean_view" data-bean-name="Colombia Supremo" data-roast-level="medium">
+                        <img src="img/bean2.webp" alt="Зерно Колумбия Супремо" width="300" height="200">
+                        <div class="bean-card__content">
+                            <h3>Колумбия Супремо</h3>
+                            <span class="roast-badge roast-medium">Средняя обжарка</span>
+                            <p>Сбалансированный вкус с нотками карамели и орехов. Универсальный вариант для любого способа заваривания.</p>
+                            <span class="price">790 ₽</span>
+                        </div>
+                    </article>
+
+                    <!-- Сорт 3 -->
+                    <article class="bean-card" data-event="bean_view" data-bean-name="Brazil Santos" data-roast-level="dark">
+                        <img src="img/bean3.webp" alt="Зерно Бразилия Сантос" width="300" height="200">
+                        <div class="bean-card__content">
+                            <h3>Бразилия Сантос</h3>
+                            <span class="roast-badge roast-dark">Темная обжарка</span>
+                            <p>Плотное тело, шоколадные ноты и легкая горчинка. Отлично подходит для эспрессо и капучино.</p>
+                            <span class="price">650 ₽</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Как выбрать обжарку -->
+        <section class="section" style="background: #fff;">
+            <div class="container">
+                <h2 class="section__title">Как выбрать обжарку?</h2>
+                <div class="roast-guide">
+                    <p><strong>Обжарка</strong> — это процесс термической обработки зеленого кофейного зерна. От степени обжарки зависят вкус, аромат и крепость напитка.</p>
+                    <ul class="roast-list">
+                        <li><strong>Светлая обжарка:</strong> сохраняет природную кислотность и фруктовые ноты. Лучше всего раскрывается в альтернативных методах (воронка, кемекс).</li>
+                        <li><strong>Средняя обжарка:</strong> золотая середина. Сбалансированный вкус, подходит и для эспрессо, и для фильтра.</li>
+                        <li><strong>Темная обжарка:</strong> дает насыщенный, горьковатый вкус с шоколадными нотами. Классика для эспрессо и напитков с молоком.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Кнопка заказа -->
+        <section class="section cta-section">
+            <div class="container cta-section__container">
+                <h2>Хотите заказать зерно?</h2>
+                <p>Оставьте заявку, и мы свяжемся с вами для уточнения деталей доставки или самовывоза.</p>
+                <a href="contacts.html" class="btn btn--primary" data-event="cta_click" data-button-name="bean_order" data-page-section="beans_cta">Заказать зерно</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <p>ООО «Зерно Семь»</p>
+                <p>614 101, г. Новоозёрск, пр. Обжарщиков, д. 7</p>
+                <p>Пн–Вс 08:00–22:00</p>
+            </div>
+            <div class="footer__socials">
+                <a href="#" class="social-link" data-event="social_click" data-network="telegram" data-page-section="footer">Telegram</a>
+                <a href="#" class="social-link" data-event="social_click" data-network="vk" data-page-section="footer">ВКонтакте</a>
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/analytics.js"></script>
+</body>
+</html>

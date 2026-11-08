@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы школы бариста «Зерно 7» | Программы и даты потоков</title>
+    <meta name="description" content="Программы обучения бариста: с нуля, латте-арт, альтернативное заваривание. Даты потоков, стоимость, запись на курс.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Курсы школы бариста «Зерно 7»">
+    <meta property="og:description" content="Выберите программу обучения и дату потока. Группы до 6 человек.">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Шапка (копируется на всех страницах) -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="Логотип Зерно 7" width="40" height="40">
+                <span>ЗЕРНО 7</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="courses.html" class="nav__link" style="color: var(--color-coffee); font-weight: bold;">Курсы</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">Меню</a></li>
+                    <li class="nav__item"><a href="beans.html" class="nav__link">Зерно</a></li>
+                    <li class="nav__item"><a href="latte-guide.html" class="nav__link">Гид по латте</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+79002070777" class="header__phone" data-event="contact_click" data-contact-type="phone">+7 (900) 207-07-77</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Карточки курсов -->
+        <section class="section">
+            <div class="container">
+                <h1 class="section__title">Наши программы</h1>
+                <div class="courses__grid">
+                    <article class="course-card" data-event="view_course" data-course-name="barista_basic">
+                        <h3>Бариста с нуля</h3>
+                        <p>5 занятий по 3 часа. Изучаем эспрессо, питчер, взбивание молока, экстракцию и работу на кофемашине.</p>
+                        <span class="course-card__price">14 900 ₽</span>
+                    </article>
+                    <article class="course-card" data-event="view_course" data-course-name="latte_art">
+                        <h3>Латте-арт</h3>
+                        <p>3 занятия. Рисуем сердце, розетту и тюльпан на капучино. Отработка на питчере.</p>
+                        <span class="course-card__price">8 900 ₽</span>
+                    </article>
+                    <article class="course-card" data-event="view_course" data-course-name="alternative">
+                        <h3>Альтернативное заваривание</h3>
+                        <p>2 занятия. Воронка, аэропресс, кемекс. Разбираемся в сортах и помоле.</p>
+                        <span class="course-card__price">5 900 ₽</span>
+                    </article>
+                    <article class="course-card" data-event="view_course" data-course-name="corporate">
+                        <h3>Корпоративный мастер-класс</h3>
+                        <p>Для команды до 12 человек. Проводится на территории заказчика или в школе.</p>
+                        <span class="course-card__price">24 000 ₽</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Даты потоков -->
+        <section class="section" id="streams">
+            <div class="container">
+                <h2 class="section__title">Ближайшие потоки</h2>
+                <div class="streams-list" id="streams-container">
+                    <!-- Сюда JS будет вставлять даты и кнопки -->
+                    <p>Загрузка расписания...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Программа курса PDF -->
+        <section class="section" style="background: #fff;">
+            <div class="container">
+                <h2 class="section__title">Программа обучения</h2>
+                <p style="text-align: center; margin-bottom: 20px;">Скачайте подробную программу курса «Бариста с нуля» в PDF.</p>
+                <div style="text-align: center;">
+                    <a href="files/course-program.pdf" class="btn btn--primary" download data-event="file_download" data-file-name="course-program.pdf" data-file-extension="pdf">Скачать программу PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Частые вопросы (FAQ) -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title">Частые вопросы</h2>
+                <div class="faq">
+                    <details class="faq__item">
+                        <summary>Нужен ли опыт работы, чтобы пойти на курс?</summary>
+                        <p>Нет. Курс «Бариста с нуля» рассчитан на новичков. Мы объясняем все термины (эспрессо, питчер, экстракция) простым языком.</p>
+                    </details>
+                    <details class="faq__item">
+                        <summary>Выдаете ли вы сертификат?</summary>
+                        <p>Да, после успешного окончания курса вы получаете сертификат нашей школы.</p>
+                    </details>
+                    <details class="faq__item">
+                        <summary>Можно ли оплатить курс в рассрочку?</summary>
+                        <p>Да, мы предоставляем рассрочку на 2 месяца без переплат. Условия обсуждаются индивидуально при записи.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <p>ООО «Зерно Семь»</p>
+                <p>614 101, г. Новоозёрск, пр. Обжарщиков, д. 7</p>
+                <p>Пн–Вс 08:00–22:00</p>
+            </div>
+            <div class="footer__socials">
+                <a href="#" class="social-link" data-event="social_click" data-network="telegram" data-page-section="footer">Telegram</a>
+                <a href="#" class="social-link" data-event="social_click" data-network="vk" data-page-section="footer">ВКонтакте</a>
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем скрипты -->
+    <script src="js/analytics.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+</html>

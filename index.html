@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофейня и школа бариста «Зерно 7» | Обучение с нуля</title>
+    <meta name="description" content="Кофейня собственной обжарки и школа бариста. Курсы бариста с нуля, латте-арт, альтернативное заваривание. Набор на декабрьские потоки.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Школа бариста «Зерно 7»">
+    <meta property="og:description" content="Обучение бариста с нуля. Набор на декабрьские потоки.">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Шапка и меню -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="Логотип Зерно 7" width="40" height="40">
+                <span>ЗЕРНО 7</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">Меню</a></li>
+                    <li class="nav__item"><a href="beans.html" class="nav__link">Зерно</a></li>
+                    <li class="nav__item"><a href="latte-guide.html" class="nav__link">Гид по латте</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+79002070777" class="header__phone" data-event="contact_click" data-contact-type="phone">+7 (900) 207-07-77</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Первый экран -->
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Стань бариста,<br>которого зовут в лучшие кофейни</h1>
+                    <p class="hero__subtitle">Школа бариста «Зерно 7». Практика на профессиональном оборудовании, группы до 6 человек.</p>
+                    <a href="contacts.html" class="btn btn--primary" data-event="cta_click" data-button-name="hero_trial" data-page-section="hero">Записаться на курс</a>
+                </div>
+                <div class="hero__image">
+                    <img src="img/hero.webp" alt="Бариста готовит кофе" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Курсы -->
+        <section class="courses section">
+            <div class="container">
+                <h2 class="section__title">Наши курсы</h2>
+                <div class="courses__grid">
+                    <article class="course-card" data-event="view_course" data-course-name="barista_basic">
+                        <h3>Бариста с нуля</h3>
+                        <p>5 занятий по 3 часа</p>
+                        <span class="course-card__price">14 900 ₽</span>
+                        <a href="courses.html" class="course-card__link">Подробнее</a>
+                    </article>
+                    <article class="course-card" data-event="view_course" data-course-name="latte_art">
+                        <h3>Латте-арт</h3>
+                        <p>3 занятия</p>
+                        <span class="course-card__price">8 900 ₽</span>
+                        <a href="courses.html" class="course-card__link">Подробнее</a>
+                    </article>
+                    <article class="course-card" data-event="view_course" data-course-name="alternative">
+                        <h3>Альтернатива</h3>
+                        <p>Воронка, аэропресс, кемекс (2 занятия)</p>
+                        <span class="course-card__price">5 900 ₽</span>
+                        <a href="courses.html" class="course-card__link">Подробнее</a>
+                    </article>
+                    <article class="course-card" data-event="view_course" data-course-name="corporate">
+                        <h3>Корпоративный мастер-класс</h3>
+                        <p>Для команды до 12 человек</p>
+                        <span class="course-card__price">24 000 ₽</span>
+                        <a href="courses.html" class="course-card__link">Подробнее</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Тест -->
+        <section class="quiz section" id="quiz">
+            <div class="container">
+                <h2 class="section__title">Какой курс вам подходит?</h2>
+                <div class="quiz__container">
+                    <div class="quiz__progress"><span id="quiz-progress-text">Вопрос 1 из 4</span></div>
+                    
+                    <div class="quiz__step active" data-step="1">
+                        <h3>1. Есть ли у вас опыт в кофейной индустрии?</h3>
+                        <button class="quiz__option" data-value="0">Нет, я полный новичок</button>
+                        <button class="quiz__option" data-value="1">Был небольшой опыт</button>
+                        <button class="quiz__option" data-value="2">Да, я работаю в сфере</button>
+                    </div>
+
+                    <div class="quiz__step" data-step="2">
+                        <h3>2. Что вам интереснее всего?</h3>
+                        <button class="quiz__option" data-value="0">Научиться варить эспрессо и капучино</button>
+                        <button class="quiz__option" data-value="2">Рисовать на кофе (латте-арт)</button>
+                        <button class="quiz__option" data-value="1">Разбираться в альтернативе (воронка, аэропресс)</button>
+                    </div>
+
+                    <div class="quiz__step" data-step="3">
+                        <h3>3. Планируете ли вы работать в кофейне?</h3>
+                        <button class="quiz__option" data-value="2">Да, хочу найти работу баристой</button>
+                        <button class="quiz__option" data-value="1">Хочу для себя, дома</button>
+                        <button class="quiz__option" data-value="0">У меня своя кофейня/кафе</button>
+                    </div>
+
+                    <div class="quiz__step" data-step="4">
+                        <h3>4. Сколько времени вы готовы уделить обучению?</h3>
+                        <button class="quiz__option" data-value="0">Много, хочу глубоко погрузиться</button>
+                        <button class="quiz__option" data-value="1">Пару занятий для удовольствия</button>
+                        <button class="quiz__option" data-value="2">Только самое необходимое для старта</button>
+                    </div>
+
+                    <div class="quiz__result" id="quiz-result" style="display: none;">
+                        <h3>Вам подходит курс:</h3>
+                        <p id="quiz-result-text" class="quiz__result-text"></p>
+                        <a href="contacts.html" class="btn btn--primary" data-event="cta_click" data-button-name="quiz_result" data-page-section="quiz">Записаться на этот курс</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Преподаватели -->
+        <section class="teachers section">
+            <div class="container">
+                <h2 class="section__title">Преподаватели</h2>
+                <p>3 профессиональных кофемашины, группа до 6 человек.</p>
+                <div class="teachers__grid">
+                    <div class="teacher-card">
+                        <img src="img/teacher1.webp" alt="Преподаватель 1" width="300" height="300">
+                        <h3>Дарья Вишнякова</h3>
+                        <p>Руководитель школы бариста</p>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="img/teacher2.webp" alt="Преподаватель 2" width="300" height="300">
+                        <h3>Иван Иванов</h3>
+                        <p>Шеф-бариста</p>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="img/teacher3.webp" alt="Преподаватель 3" width="300" height="300">
+                        <h3>Анна Петрова</h3>
+                        <p>Чемпионка по латте-арту</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотографии класса -->
+        <section class="gallery section">
+            <div class="container">
+                <h2 class="section__title">Как проходит обучение</h2>
+                <div class="gallery__grid">
+                    <img src="img/gallery1.webp" alt="Класс 1" data-event="gallery_view" data-photo-index="1" width="300" height="200">
+                    <img src="img/gallery2.webp" alt="Класс 2" data-event="gallery_view" data-photo-index="2" width="300" height="200">
+                    <img src="img/gallery3.webp" alt="Класс 3" data-event="gallery_view" data-photo-index="3" width="300" height="200">
+                </div>
+            </div>
+        </section>
+
+        <!-- Повторный призыв к записи -->
+        <section class="cta-section section">
+            <div class="container cta-section__container">
+                <h2>Открыт набор на декабрьские потоки</h2>
+                <p>Количество мест ограничено (до 6 человек в группе).</p>
+                <a href="contacts.html" class="btn btn--primary" data-event="cta_click" data-button-name="footer_cta" data-page-section="cta_section">Оставить заявку</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <p>ООО «Зерно Семь»</p>
+                <p>614 101, г. Новоозёрск, пр. Обжарщиков, д. 7</p>
+                <p>Пн–Вс 08:00–22:00</p>
+            </div>
+            <div class="footer__socials">
+                <a href="#" class="social-link" data-event="social_click" data-network="telegram" data-page-section="footer">Telegram</a>
+                <a href="#" class="social-link" data-event="social_click" data-network="vk" data-page-section="footer">ВКонтакте</a>
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/analytics.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

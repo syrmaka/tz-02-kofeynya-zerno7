@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо! Заявка отправлена | Зерно 7</title>
+    <meta name="description" content="Ваша заявка на курс успешно отправлена. Мы свяжемся с вами в ближайшее время.">
+    
+    <!-- Open Graph (можно не заполнять, но по ТЗ нужно) -->
+    <meta property="og:title" content="Заявка отправлена | Зерно 7">
+    <meta property="og:description" content="Спасибо за заявку! Мы скоро свяжемся с вами.">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Шапка (стандартная) -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="Логотип Зерно 7" width="40" height="40">
+                <span>ЗЕРНО 7</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">Меню</a></li>
+                    <li class="nav__item"><a href="beans.html" class="nav__link">Зерно</a></li>
+                    <li class="nav__item"><a href="latte-guide.html" class="nav__link">Гид по латте</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+79002070777" class="header__phone" data-event="contact_click" data-contact-type="phone">+7 (900) 207-07-77</a>
+        </div>
+    </header>
+
+    <main class="section" style="min-height: 60vh; display: flex; align-items: center;">
+        <div class="container" style="max-width: 700px; text-align: center;">
+            
+            <h1 class="section__title" style="color: var(--color-coffee); font-size: 48px;">Спасибо!</h1>
+            <p style="font-size: 20px; margin-bottom: 20px;">Ваша заявка успешно отправлена.</p>
+            
+            <!-- Номер заявки (заполняется через JS) -->
+            <div style="background: #fff; padding: 20px; border-radius: 12px; margin-bottom: 40px; display: inline-block;">
+                <p style="margin: 0; font-size: 14px; color: #666;">Номер вашей заявки:</p>
+                <p id="request-id-display" style="margin: 5px 0 0 0; font-size: 20px; font-weight: 700; font-family: var(--font-heading);">Загрузка...</p>
+            </div>
+
+            <!-- Что будет дальше -->
+            <div style="text-align: left; background: #fff; padding: 30px; border-radius: 12px; margin-bottom: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <h2 style="font-size: 24px; margin-bottom: 20px;">Что будет дальше?</h2>
+                <ol style="list-style-position: inside; display: flex; flex-direction: column; gap: 15px; font-size: 16px;">
+                    <li>Мы получили вашу заявку и уже передали её администратору школы.</li>
+                    <li>В течение рабочего дня (с 08:00 до 22:00) мы свяжемся с вами по указанному номеру телефона.</li>
+                    <li>Подтвердим наличие мест на выбранном потоке и расскажем, как можно внести оплату.</li>
+                </ol>
+            </div>
+
+            <!-- Соцсети -->
+            <div>
+                <p style="margin-bottom: 15px;">Пока ждете звонка, подписывайтесь на наши соцсети — там много интересного о кофе:</p>
+                <div class="messenger-buttons" style="justify-content: center;">
+                    <a href="https://t.me/zerno7_example" target="_blank" class="btn btn--telegram" data-event="social_click" data-network="telegram" data-page-section="thanks" style="max-width: 200px;">Telegram</a>
+                    <a href="https://vk.com/zerno7_example" target="_blank" class="btn" style="background: #0077FF; color: #fff; max-width: 200px;" data-event="social_click" data-network="vk" data-page-section="thanks">ВКонтакте</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Подвал (стандартный) -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <p>ООО «Зерно Семь»</p>
+                <p>614 101, г. Новоозёрск, пр. Обжарщиков, д. 7</p>
+                <p>Пн–Вс 08:00–22:00</p>
+            </div>
+            <div class="footer__socials">
+                <a href="#" class="social-link" data-event="social_click" data-network="telegram" data-page-section="footer">Telegram</a>
+                <a href="#" class="social-link" data-event="social_click" data-network="vk" data-page-section="footer">ВКонтакте</a>
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/analytics.js"></script>
+    
+    <!-- Скрипт для вытаскивания ID из URL -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const requestId = urlParams.get('id');
+            const displayElement = document.getElementById('request-id-display');
+
+            if (requestId) {
+                displayElement.innerText = requestId;
+            } else {
+                displayElement.innerText = 'REQ-XXXXXX (ID не найден)';
+                displayElement.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>
