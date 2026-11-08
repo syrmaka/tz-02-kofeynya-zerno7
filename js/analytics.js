@@ -2,7 +2,7 @@
 // НАСТРОЙКА GOOGLE ANALYTICS 4
 // ==========================================
 
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; 
+const GA_MEASUREMENT_ID = 'G-PB4Q3DF441'; 
 
 // Инициализация GA4
 window.dataLayer = window.dataLayer || [];
